@@ -10,6 +10,9 @@
 
     <!--Description-->
     
+        <meta name="description" content="问题习题8.3吝啬SAT问题是这样的：给定一组子句（每个子句都是其中文字的析取）和整数k，求一个最多有k个变量为true的满足赋值——如果该赋值存在。证明吝啬SAT是NP-完全问题。
+解答从SAT问题规约到吝啬SAT问题：对一个给定的SAT实例I，定义(I, k)为吝啬SAT问题的一个实例，其中k为">
+    
 
     <!--Author-->
     
@@ -18,7 +21,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="FideoJ&#39;s Blog"/>
+        <meta property="og:title" content="算法系列（18）：证明吝啬SAT是NP-完全问题"/>
     
 
     <!--Open Graph Description-->
@@ -29,7 +32,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -40,7 +43,7 @@
 
     <!-- Title -->
     
-    <title>FideoJ&#39;s Blog</title>
+    <title>算法系列（18）：证明吝啬SAT是NP-完全问题 - FideoJ&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -127,208 +130,64 @@
 
     <!-- Main Content -->
     <!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
 <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>FideoJ's Blog</h1>
-                    <hr class="small">
-                    <span class="subheading"></span>
+                <div class="post-heading">
+                    <h1>算法系列（18）：证明吝啬SAT是NP-完全问题</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                            Posted by FideoJ on
+                        
+                        2018-01-02
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
-                <div class="post-preview">
-    <a href="/2018-01-21/canCompleteCircuit/">
-        <h2 class="post-title">
-            算法系列（20）：Gas Station
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2018-01-21
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2018-01-20/searchRotatedSortedArray/">
-        <h2 class="post-title">
-            算法系列（19）：Search in Rotated Sorted Array
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2018-01-20
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2018-01-02/npComplete/">
-        <h2 class="post-title">
-            算法系列（18）：证明吝啬SAT是NP-完全问题
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2018-01-02
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017-12-30/jump/">
-        <h2 class="post-title">
-            算法系列（17）：Jump Game II
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2017-12-30
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017-12-23/minDepth/">
-        <h2 class="post-title">
-            算法系列（16）：Minimum Depth of Binary Tree
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2017-12-23
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017-12-16/EditDist/">
-        <h2 class="post-title">
-            算法系列（15）：Edit Distance
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2017-12-16
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017-12-09/WordBreak/">
-        <h2 class="post-title">
-            算法系列（14）：Word Break
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2017-12-09
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017-12-02/numDecodings/">
-        <h2 class="post-title">
-            算法系列（13）：Decode Ways
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2017-12-02
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017-11-25/longestPalindrome/">
-        <h2 class="post-title">
-            算法系列（12）：Longest Palindromic Substring
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2017-11-25
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017-11-18/longestValidParentheses/">
-        <h2 class="post-title">
-            算法系列（11）：Longest Valid Parentheses
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2017-11-18
-    </p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
 
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/page/2/">Older Posts  &rarr;</a></li>
-    
-</ul>
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>习题8.3<br>吝啬SAT问题是这样的：给定一组子句（每个子句都是其中文字的析取）和整数k，求一个最多有k个变量为true的满足赋值——如果该赋值存在。<br>证明吝啬SAT是NP-完全问题。</p>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>从SAT问题规约到吝啬SAT问题：<br>对一个给定的SAT实例I，定义(I, k)为吝啬SAT问题的一个实例，其中k为实例I中的变量个数。<br>只需证明：“(I, k)是吝啬SAT问题的一个有解实例”与“I是SAT问题的一个有解实例”必然同时发生或同时不发生。</p>
+<ol>
+<li>假设S是I的一个可满足赋值，因为一共有k个变量，所以S中为true的变量数不会超过k，从而S也是(I, k)的一个可满足赋值。</li>
+<li>假设S是(I, k)的一个可满足赋值，即S中为true的变量不会超过k个，显然S也是I的一个可满足赋值。  </li>
+</ol>
+<p>证毕，因此SAT问题可规约到吝啬SAT问题，而SAT问题是NP-完全问题，因此吝啬SAT问题是NP-完全问题。</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
-
+</article>
 
     <!-- Footer -->
     <hr />
