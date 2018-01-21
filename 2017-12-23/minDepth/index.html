@@ -10,6 +10,9 @@
 
     <!--Description-->
     
+        <meta name="description" content="问题Given a binary tree, find its minimum depth.
+The minimum depth is the number of nodes along the shortest path from the root node down to the nearest">
+    
 
     <!--Author-->
     
@@ -18,7 +21,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="FideoJ&#39;s Blog"/>
+        <meta property="og:title" content="算法系列（16）：Minimum Depth of Binary Tree"/>
     
 
     <!--Open Graph Description-->
@@ -29,7 +32,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -40,7 +43,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2017/12 - FideoJ&#39;s Blog</title>
+    <title>算法系列（16）：Minimum Depth of Binary Tree - FideoJ&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -126,112 +129,61 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2017/12</h1>
+                <div class="post-heading">
+                    <h1>算法系列（16）：Minimum Depth of Binary Tree</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                            Posted by FideoJ on
+                        
+                        2017-12-23
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2017-12-30/jump/">
-        <h1 class="post-title archive">
-            算法系列（17）：Jump Game II
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2017-12-30
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>Given a binary tree, find its minimum depth.</p>
+<p>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>BFS。<br>使用map来存储节点的深度信息。</p>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">#include &lt;bits/stdc++.h&gt;</div><div class="line">using namespace std;</div><div class="line">/**</div><div class="line"> * Definition for a binary tree node.</div><div class="line"> * struct TreeNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     TreeNode *left;</div><div class="line"> *     TreeNode *right;</div><div class="line"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</div><div class="line"> * &#125;;</div><div class="line"> */</div><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">  int minDepth(TreeNode *root) &#123;</div><div class="line">    if (!root)</div><div class="line">      return 0;</div><div class="line">    queue&lt;TreeNode *&gt; que;</div><div class="line">    que.push(root);</div><div class="line">    depth[root] = 1;</div><div class="line">    while (!que.empty()) &#123;</div><div class="line">      TreeNode *node = que.front();</div><div class="line">      que.pop();</div><div class="line">      bool isLeaf = true;</div><div class="line">      if (node-&gt;left) &#123;</div><div class="line">        isLeaf = false;</div><div class="line">        que.push(node-&gt;left);</div><div class="line">        depth[node-&gt;left] = depth[node] + 1;</div><div class="line">      &#125;</div><div class="line">      if (node-&gt;right) &#123;</div><div class="line">        isLeaf = false;</div><div class="line">        que.push(node-&gt;right);</div><div class="line">        depth[node-&gt;right] = depth[node] + 1;</div><div class="line">      &#125;</div><div class="line">      if (isLeaf)</div><div class="line">        return depth[node];</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">private:</div><div class="line">  map&lt;TreeNode *, int&gt; depth;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2017-12-23/minDepth/">
-        <h1 class="post-title archive">
-            算法系列（16）：Minimum Depth of Binary Tree
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2017-12-23
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2017-12-16/EditDist/">
-        <h1 class="post-title archive">
-            算法系列（15）：Edit Distance
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2017-12-16
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2017-12-09/WordBreak/">
-        <h1 class="post-title archive">
-            算法系列（14）：Word Break
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2017-12-09
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2017-12-02/numDecodings/">
-        <h1 class="post-title archive">
-            算法系列（13）：Decode Ways
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-            Posted by FideoJ on
-        
-        2017-12-02
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
-
+</article>
 
     <!-- Footer -->
     <hr />
