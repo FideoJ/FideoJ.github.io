@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点。
+瀑布模型
+
+优点：为项目提供了按阶段划分的检查点；当前一阶段完成后，只需关注后续阶段；提供了一个模板，这个模板使得分析、设计、编码、测试和支持的方法可以在该模板下有一个共同的指导；
+缺点：各个阶段的划分完全固定，阶段之间产生大量的文档，极大地">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="FideoJ">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="系分学习系列（2）：UP与项目管理"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="FideoJ&#39;s Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>系分学习系列（2）：UP与项目管理 - FideoJ&#39;s Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">FideoJ's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/FideoJ">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>系分学习系列（2）：UP与项目管理</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                            Posted by FideoJ on
+                        
+                        2018-04-12
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h3 id="简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点。"><a href="#简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点。" class="headerlink" title="简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点。"></a>简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点。</h3><ul>
+<li><p>瀑布模型</p>
+<ul>
+<li>优点：为项目提供了按阶段划分的检查点；当前一阶段完成后，只需关注后续阶段；提供了一个模板，这个模板使得分析、设计、编码、测试和支持的方法可以在该模板下有一个共同的指导；</li>
+<li>缺点：各个阶段的划分完全固定，阶段之间产生大量的文档，极大地增加了工作量；由于开发模型是线性的，用户只有等到整个过程的末期才能见到开发成果，从而增加了开发风险；不适应用户需求的变化；</li>
+</ul>
+</li>
+<li><p>增量模型</p>
+<ul>
+<li>优点：将待开发的软件系统模块化，可以分批次地提交软件产品，使用户可以及时了解软件项目的进展；以组件为单位进行开发降低了软件开发的风险；开发顺序灵活；</li>
+<li>缺点：要求待开发的软件系统可以被模块化； </li>
+</ul>
+</li>
+<li><p>螺旋模型</p>
+<ul>
+<li>优点：设计上的灵活性,可以在项目的各个阶段进行变更；以小的分段来构建大型系统，成本计算变得简单容易； </li>
+<li>缺点：采用螺旋模型需要具有相当丰富的风险评估经验和专门知识；过多的迭代次数会增加开发成本，延迟提交时间；</li>
+</ul>
+</li>
+<li><p>原型方法</p>
+<ul>
+<li>优点：发循序渐进，反复修改，确保较好的用户满意度；开发周期短，费用相对少；易学易用，减少用户的培训时间；应变能力强；</li>
+<li>缺点：不适合大规模系统的开发；开发过程管理要求高，整个开发过程要经过“修改—评价—再修改”的多次反复；用户过早看到系统原型，可能易使用户失去信心；开发人员易将原型取代系统分析；缺乏规范化的文档资料；</li>
+</ul>
+</li>
+</ul>
+<h3 id="简述-UP-的三大特点，其中哪些内容体现了用户驱动的开发，哪些内容体现风险驱动的开发？"><a href="#简述-UP-的三大特点，其中哪些内容体现了用户驱动的开发，哪些内容体现风险驱动的开发？" class="headerlink" title="简述 UP 的三大特点，其中哪些内容体现了用户驱动的开发，哪些内容体现风险驱动的开发？"></a>简述 UP 的三大特点，其中哪些内容体现了用户驱动的开发，哪些内容体现风险驱动的开发？</h3><p>UP的三大特点：用例驱动、以架构为核心、迭代及增量。<br>用例驱动和迭代及增量体现了用户驱动的开发：早期的迭代目标要能够识别与降低最高风险，并且能构造客户最关心的可视化特性。<br>以架构为核心体现了风险驱动的开发：早期迭代要致力于核心架构的构造、测试和稳定，没有稳固的架构就会带来高风险。</p>
+<h3 id="UP-四个阶段的划分准则是什么？关键的里程碑是什么？"><a href="#UP-四个阶段的划分准则是什么？关键的里程碑是什么？" class="headerlink" title="UP 四个阶段的划分准则是什么？关键的里程碑是什么？"></a>UP 四个阶段的划分准则是什么？关键的里程碑是什么？</h3><p>1、初始阶段<br>初始阶段的目标是为系统建立商业案例并确定项目的边界。为了达到该目的必须识别所有与系统交互的外部实体，在较高层次上定义交互的特性。本阶段具有非常重要的意义，在这个阶段中所关注的是整个项目进行中的业务和需求方面的主要风险。对于建立在原有系统基础上的开发项目来讲，初始阶段可能很短。<br>初始阶段结束时是第一个重要的里程碑：生命周期目标(Lifecycle Objective)里程碑。生命周期目标里程碑评价项目基本的生存能力。</p>
+<p>2、细化阶段<br>细化阶段的目标是分析问题领域，建立健全的体系结构基础，编制项目计划，淘汰项目中最高风险的元素。为了达到该目的，必须在理解整个系统的基础上，对体系结构作出决策，包括其范围、主要功能和诸如性能等非功能需求。同时为项目建立支持环境，包括创建开发案例，创建模板、准则并准备工具。<br>细化阶段结束时第二个重要的里程碑：生命周期结构(Lifecycle Architecture)里程碑。生命周期结构里程碑为系统的结构建立了管理基准并使项目小组能够在构建阶段中进行衡量。此刻，要检验详细的系统目标和范围、结构的选择以及主要风险的解决方案。</p>
+<p>3、构造阶段<br>在构建阶段，所有剩余的构件和应用程序功能被开发并集成为产品，所有的功能被详细测试。从某种意义上说，构建阶段是一个制造过程，其重点放在管理资源及控制运作以优化成本、进度和质量。<br>构建阶段结束时是第三个重要的里程碑：初始功能(Initial Operational)里程碑。初始功能里程碑决定了产品是否可以在测试环境中进行部署。此刻，要确定软件、环境、用户是否可以开始系统的运作。此时的产品版本也常被称为“beta”版。</p>
+<p>4、交付阶段<br>交付阶段的重点是确保软件对最终用户是可用的。交付阶段可以跨越几次迭代，包括为发布做准备的产品测试，基于用户反馈的少量的调整。在生命周期的这一点上，用户反馈应主要集中在产品调整，设置、安装和可用性问题，所有主要的结构问题应该已经在项目生命周期的早期阶段解决了。<br>在交付阶段的终点是第四个里程碑：产品发布(Product Release)里程碑。此时，要确定目标是否实现，是否应该开始另一个开发周期。在一些情况下这个里程碑可能与下一个周期的初始阶段的结束重合。</p>
+<h3 id="IT-项目管理中，“工期、质量、范围-内容”-三个元素中，在合同固定条件下，为什么说“范围-内容”是项目团队是易于控制的"><a href="#IT-项目管理中，“工期、质量、范围-内容”-三个元素中，在合同固定条件下，为什么说“范围-内容”是项目团队是易于控制的" class="headerlink" title="IT 项目管理中，“工期、质量、范围/内容” 三个元素中，在合同固定条件下，为什么说“范围/内容”是项目团队是易于控制的"></a>IT 项目管理中，“工期、质量、范围/内容” 三个元素中，在合同固定条件下，为什么说“范围/内容”是项目团队是易于控制的</h3><p>对于工期，项目时间相关的因素用进度计划描述，进度计划不仅说明了完成项目工作范围内所有工作需要的时间，也规定了每个活动的具体开始和完成日期。项目中的活动根据工作范围确定，在确定活动的开始和结束时间还要考虑他们之间的依赖关系。<br>对于质量，指项目满足明确或隐含需求的程度。一般通过定义工作范围中的交付物标准来明确定义，这些标准包括各种特性及这些特性需要满足的 要求，因此交付物在项目管理中有重要的地位。另外，有时还可能对项目的过程有明确要求，比如规定过程应该遵循的规范和标准，并要求提供这些过程得以有效执 行的证据。<br>对于范围/内容，指为了实现项目目标必须完成的所有工作。一般通过定义交付物（Deliverable）和交付物标准来定义工作范 围。工作范围根据项目目标分解得到，它指出了“完成哪些工作就可以达到项目的目标”，或者说 “完成哪些工作项目就可以结束了”。后一点非常重要，如果没有工作范围的定义，项目就可能永远做不完。要严格控制工作范围的变化，一旦失控就会出现“出力不讨好”的尴尬局面：一方面做了许多与实现目标无关的额外工作，另一方面却因额外工作影响了原定目标的实现，造成商业和声誉的双重损失。<br>因此，“范围/内容”是项目团队是易于控制的。</p>
+<h3 id="为什么说，UP-为企业按固定节奏生产、固定周期发布软件产品提供了依据？"><a href="#为什么说，UP-为企业按固定节奏生产、固定周期发布软件产品提供了依据？" class="headerlink" title="为什么说，UP 为企业按固定节奏生产、固定周期发布软件产品提供了依据？"></a>为什么说，UP 为企业按固定节奏生产、固定周期发布软件产品提供了依据？</h3><p>UP将软件的生命周期划分为四个阶段，并且开发被组织成一系列固定的短期小项目，称为迭代，每次迭代都产生经过测试、集成并可执行的局部系统。每次迭代都具有各自的需求分析、设计、实现和测试活动。<br>在每次迭代完成后，都有一定的产品可供发布，因此，UP 为企业按固定节奏生产、固定周期发布软件产品提供了依据。</p>
+<h3 id="项目管理看板"><a href="#项目管理看板" class="headerlink" title="项目管理看板"></a>项目管理看板</h3><p><img src="/images/kanban.jpg" style="zoom: 40%;"></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/FideoJ" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2018 FideoJ<br></p>
+                <!--<p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>-->
+                <!--<p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>-->
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
