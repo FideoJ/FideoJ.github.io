@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="最近在阅读《UML与模式应用》，收获颇丰。结合过往的经验，对软件项目管理也有了更深的认识，现将该书前两个部分中几点印象深刻的内容整理成笔记，并记录心得。  
+关于迭代和进化式开发迭代开发是UP和大多数其他现代方法中的关键实践。在这种生命周期方法中，开发被组织成一系列固定的短期（如三个星期）小项目，称">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="FideoJ">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="关于迭代方法与用例"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="FideoJ&#39;s Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>关于迭代方法与用例 - FideoJ&#39;s Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">FideoJ's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/FideoJ">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>关于迭代方法与用例</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                            Posted by FideoJ on
+                        
+                        2018-04-15
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>最近在阅读《UML与模式应用》，收获颇丰。结合过往的经验，对软件项目管理也有了更深的认识，现将该书前两个部分中几点印象深刻的内容整理成笔记，并记录心得。  </p>
+<h2 id="关于迭代和进化式开发"><a href="#关于迭代和进化式开发" class="headerlink" title="关于迭代和进化式开发"></a>关于迭代和进化式开发</h2><p>迭代开发是UP和大多数其他现代方法中的关键实践。在这种生命周期方法中，开发被组织成一系列固定的短期（如三个星期）小项目，称为迭代；每次迭代都产生经过测试、集成并可执行的的局部系统。每次迭代都具有各自的需求分析、设计、实现和测试活动。</p>
+<h2 id="如何进行迭代和进化式分析和设计"><a href="#如何进行迭代和进化式分析和设计" class="headerlink" title="如何进行迭代和进化式分析和设计"></a>如何进行迭代和进化式分析和设计</h2><p>1）在第1次迭代之前，召开第一个时间定量的需求工作会议，例如确切地定义为两天时间，业务和开发人员（包括首席架构师）需要出席。<br>在第一天上午，进行高阶需求分析，例如仅仅确定用例和特性的名称，以及关键的非功能性需求。这种分析不可能是完美的。<br>通过咨询首席架构师和业务人员，从高阶列表中选择10%列表项，这些项目具备以下三种性质：1，具有重要的架构意义；2，具有高业务价值；3，具有高风险。<br>在剩下的一天半内，对这三个用例的功能和非功能性需求进行详细的分析。完成这一过程后，对10%的用例进行了深入分析，90%的用例进行了高阶分析。<br>2）在第1次迭代之前，召开迭代计划会议，选择上述三种用例的子集，在特定时间内（例如，四周的时间定量迭代）进行设计、构造和测试。<br>3）在三到四周内完成第1次迭代（选择时间定量，并严格遵守时间）：<br>在开始的两天内，开发者和其他成员分组进行建模和设计工作，在首席架构师的带领和指导下，于“公共作战室”的众多白板上，画出UML的草图（及其他的模型）。<br>然后，开发者摘掉其“建模帽子”并戴上“编程帽子”，开始编程、测试和集成工作并且剩余的时间均用于完成这项工作。<br>进行大量的测试，包括单元测试、验收测试、负载测试和可用性测试等。<br>在结束前的一周，检查是否能够完成初始的迭代目标；如果不能，则缩小迭代的范围，将次要目标置回任务列表中。<br>在最后一周的星期二，冻结代码。必须检入、集成和测试所有代码，以建立迭代的基线。<br>在星期三的上午，向外部涉众演示此局部系统，展示早期可视进展，同时要求反馈。</p>
+<p>回忆去年暑假Matrix启动OJ项目的经历，对照作者给出的迭代建议方案，深感之前的OJ开发被瀑布式思维所累。<br>当时是产品经理先编写详尽的PRD，接着设计师出图，然后工程师们进行开发。这是典型的线性开发模型，下游在上游完成前无事可做，且难以快速得到用户反馈。<br>寒假期间，产品经理重新对OJ的需求进行整理并简化出一个基础版本，基本达到了“迭代和进化式分析和设计”的要求。<br>上述的例子非常有参考价值，希望能在之后的项目管理中予以实践。</p>
+<h2 id="什么是用例"><a href="#什么是用例" class="headerlink" title="什么是用例"></a>什么是用例</h2><p>通俗地讲，用例是文本形式的情节描述，用以说明某参与者使用系统以实现某些目标。</p>
+<h2 id="为什么使用用例"><a href="#为什么使用用例" class="headerlink" title="为什么使用用例"></a>为什么使用用例</h2><p>用例是一种优秀的方法，使领域专家或需求提供者自己编写（或参与编写）用例成为可能，并使这项工作难度降低。<br>用例的另一个价值是强调了用户的目标和观点。我们会提出这样的问题：“谁使用系统？他们使用的典型场景是什么？他们的目的是什么？”与查询系统特性清单相比，以上问题更强调<strong>以客户为中心</strong>。</p>
+<h2 id="一个详述风格的用例"><a href="#一个详述风格的用例" class="headerlink" title="一个详述风格的用例"></a>一个详述风格的用例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line">处理销售</div><div class="line">范围：快餐店 POS应用  </div><div class="line">级别：用户目标  </div><div class="line">主要参与者：收银员  </div><div class="line">涉众及其关注点：  </div><div class="line">- 收银员：希望能够准确、快速地输入，而且没有支付错误，因为如果少收货款，将其薪 水中扣除</div><div class="line">- 顾客：希望以最小代价完成购买活动并得到快速服务。希望便捷、清晰地看到所输的商品项目和价格。希望得到购买凭证，以便退货。</div><div class="line">- 公司：希望准确地记录交易，满足顾客需求。希望有一定的容错性，也能够完成销售。--经理：希望能够快速地执行超空操作，并易于更正收银员的不正当操作。</div><div class="line">    </div><div class="line">前置条件：收银员必须经过确认和认证。</div><div class="line">成功保证：存储销售信息。准确计算税金。更新账务。生成票据。  </div><div class="line">主成功场景：   </div><div class="line">1. 顾客到前台进行点餐。</div><div class="line">2. 收银员通过POS机开始一次新的销售交易。</div><div class="line">3. 收银员告知顾客当前可选商品并根据顾客选择输入商品名称。</div><div class="line">4. 系统逐条记录出售的商品，并显示该商品的描述，价格和累计额。价格通过一组价格规则来计算。</div><div class="line">收银员重复3~4步，直至输入结束。</div><div class="line">5. 系统显示总额。</div><div class="line">6. 收银员告知顾客商品名称和数量以及总额，并请顾客付款。</div><div class="line">7. 顾客付款，系统处理支付。</div><div class="line">8. 系统记录完整的销售信息。</div><div class="line">9. 系统打印票据。</div><div class="line">10. 收银员备齐所有商品给顾客。</div><div class="line">11. 顾客携带商品和票据离开。</div><div class="line">  </div><div class="line">扩展：  </div><div class="line">*a、经理在任意时刻要求进行超控操作  </div><div class="line">  1、系统进入经理授权模式。  </div><div class="line">  2、经理或收银员执行某一经理模式的操作。例如，变更现金结余，恢复其他登录者中断的销售交易，取消销售交易等  </div><div class="line">  3、系统回复到收银员授权模式。  </div><div class="line">*b、系统在任意时刻失败:  </div><div class="line">为了支持恢复和更正账务处理，要保证所交易的敏感状态和事件都能够从场景的任何一步中完全恢复。  </div><div class="line">  1、收银员重启系统，登录，请求恢复上次状态。  </div><div class="line">  2、系统重建上次状态。  </div><div class="line">2a、系统在恢复过程中检测到异常：  </div><div class="line">  1、 系统同收银员提示错误，记录此错误，并进入一个初始状态  </div><div class="line">  2、 收银员开始一次新的销售交易。  </div><div class="line">  </div><div class="line">1a、客户或经理需要恢复一个中断的销售交易  </div><div class="line">  1、 收银员执行恢复操作，并且输入ID以提取对应的销售交易  </div><div class="line">  2、 系统显示被恢复的销售交易状态及其小计  </div><div class="line">2a、未发现对应的销售交易。  </div><div class="line">  1、系统向收银员提示错误。  </div><div class="line">  2、收银员可能会开始一个新销售交易，并重新输入所有商品。  </div><div class="line">  3、收银员继续该次销售交易（可能要输入更多的商品或处理支付）。  </div><div class="line">  4、收银员响应该错误。  </div><div class="line">3-6a、顾客要求收银员从所购商品中去掉一项：  </div><div class="line">  1、收银员输入商品名称并将其删除。  </div><div class="line">  2、系统删除该项目并显示更新后的累计额  </div><div class="line">3-6b、顾客要求收银员取消销售交易：  </div><div class="line">  1、收银员在系统中取消销售交易。  </div><div class="line">3-6c、顾客要求收银员改换商品  </div><div class="line">  1、收银员在系统删除商品并添加顾客所需商品。  </div><div class="line">5b、顾客声称他们符合打折条件（例如，拥有VIP卡，购物券）：  </div><div class="line">  1、收银员提出打折请求。  </div><div class="line">  2、收银员选择对应的折扣。  </div><div class="line">  3、系统按照打折规则显示折扣总计。  </div><div class="line">6a、顾客现金付款，但携带的现金不足：  </div><div class="line">  1、顾客要求取消此次销售交易，收银员在系统上取消该销售交易。  </div><div class="line">7a、支付（该系统仅支持现金支付）：  </div><div class="line">  1、收银员输入收取的现金额。  </div><div class="line">  2、系统显示找零金额，并弹出现金抽屉。  </div><div class="line">  3、收银员放入收取的现金，并给顾客找零。  </div><div class="line">  4、系统记录该现金支付。  </div><div class="line">9a、打印票据  </div><div class="line">  1、如果系统检测到错误，给出提示  </div><div class="line">  2、收银员更换纸张  </div><div class="line">  3、收银员请求打印其他票据  </div><div class="line">10a、顾客要求收银员退货或改换商品。  </div><div class="line">  1、收银员请求经理处理。  </div><div class="line">  2、经理执行超控处理。  </div><div class="line">  3、经理手工输入销售单号并对相应的销售单进行修改。</div><div class="line"></div><div class="line">特殊需求：</div><div class="line">- 由于某些原因，我们希望在访问远程服务（如库存系统）失败的情况下具有比较强的恢复功能。</div><div class="line">- 支持文本显示的语言国际化</div><div class="line">- 在步骤3和步骤7中加入可插拔的业务规则</div><div class="line"></div><div class="line">技术与数据变元表:</div><div class="line">*a、经理超控需要在键盘上输入授权码。</div><div class="line">3a、商品名称需要在屏幕上输入</div><div class="line">发生频率：可能会不断地发生</div><div class="line">...</div></pre></td></tr></table></figure>
+<p>处理销售在此系统中是一个核心且复杂的需求，通过此详述的用例，各种复杂多样的场景及相应策略得以展示出来。并且，与系统特性清单相比，用例更加形象生动，易于理解。同时，用例与下游实现充分解耦，选择实现方案时具有较好的灵活性。</p>
+<h2 id="阅读心得"><a href="#阅读心得" class="headerlink" title="阅读心得"></a>阅读心得</h2><p>迭代式开发以及使用用例表达需求是近年来软件项目开发的最佳实践，非常值得管理者们深入理解并予以实践。<br>一个优秀的技术团队，必须依靠一套先进科学的项目管理方案，才能将生产力最大化。</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/FideoJ" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2018 FideoJ<br></p>
+                <!--<p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>-->
+                <!--<p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>-->
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
